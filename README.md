@@ -16,7 +16,7 @@ if possible;
 * consequently benefit from various optimizations (notably, [dead code elimination] and
 [constant propagation]), if possible.
 
-However, it also creates additional mental overhead and in case cases might cause
+However, it also creates additional mental overhead and in some cases might cause
 genericity-induced problems.
 
 Eventually, definition sites might become cleaner with an attribute proc macro.

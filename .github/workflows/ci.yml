@@ -1,0 +1,27 @@
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    name: Run check
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v3
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+          toolchain: stable
+      - name: Run check
+        run: cargo check
+      - name: Run Clippy
+        run: cargo clippy -- -D warnings
+      - name: Check formatting
+        run: cargo fmt -- --check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:

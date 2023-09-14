@@ -21,7 +21,7 @@ genericity-induced problems.
 
 Eventually, definition sites might become cleaner with an attribute proc macro.
 
-## Simple example
+## Example
 
 ```rust,no_run
 use rand::Rng;

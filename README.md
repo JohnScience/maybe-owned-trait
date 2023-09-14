@@ -1,5 +1,11 @@
 # Either an owned or borrowed value, with type known at compile time
 
+[![Crates.io](https://img.shields.io/crates/v/maybe-owned-trait)](https://crates.io/crates/maybe-owned-trait)
+[![Downloads](https://img.shields.io/crates/d/maybe-owned-trait.svg)](https://crates.io/crates/maybe-owned-trait)
+[![Documentation](https://docs.rs/maybe-owned-trait/badge.svg)](https://docs.rs/maybe-owned-trait)
+[![License](https://img.shields.io/crates/l/maybe-owned-trait)](https://crates.io/crates/maybe-owned-trait)
+[![Dependency Status](https://deps.rs/repo/github/JohnScience/maybe-owned-trait/status.svg)](https://deps.rs/repo/github/JohnScience/maybe-owned-trait)
+
 This crate offers a `MaybeOwned` trait which allows you to pass either an owned
 or a borrowed value to a function. As opposed to [`std::borrow::Cow`]
 and [`beef::Cow`], this trait

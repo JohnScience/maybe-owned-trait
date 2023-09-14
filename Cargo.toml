@@ -1,0 +1,33 @@
+[package]
+name = "maybe-owned-trait"
+version = "0.1.0"
+authors = ["Dmitrii Demenev <demenev.dmitriy1@gmail.com>"]
+edition = "2021"
+# rust-version
+description = "Either an owned or borrowed value, with type known at compile time."
+documentation = "https://docs.rs/maybe-owned-trait"
+readme = "README.md"
+# homepage = ""
+repository = "github.com/JohnScience/maybe-owned-trait"
+license = "MIT OR Apache-2.0"
+# license-file | not needed
+keywords = ["cow", "owned", "borrowed"]
+categories = ["rust-patterns"]
+# workspace | not needed
+# build | not needed
+# links | not needed
+# exclude | not needed
+# include | not needed
+# publish | not needed
+# metadata | not needed
+# default-run | not needed
+# autobins | not needed
+# autoexamples | not needed
+# autotests | not needed
+# autobenches | not needed
+# resolver | not needed
+
+[dependencies]
+
+[dev-dependencies]
+rand = "0.8.5"

@@ -8,7 +8,7 @@ description = "Either an owned or borrowed value, with type known at compile tim
 documentation = "https://docs.rs/maybe-owned-trait"
 readme = "README.md"
 # homepage = ""
-repository = "github.com/JohnScience/maybe-owned-trait"
+repository = "https://github.com/JohnScience/maybe-owned-trait"
 license = "MIT OR Apache-2.0"
 # license-file | not needed
 keywords = ["cow", "owned", "borrowed"]

@@ -46,8 +46,13 @@ my_fn(&path);
 my_fn(path);
 ```
 
+With `beef` [feature] enabled, this crate also provides the implementations of `MaybeOwned`
+for [`beef::Cow`] and [`beef::lean::Cow`].
+
 [static dispatch]: https://en.wikipedia.org/wiki/Static_dispatch
 [dead code elimination]: https://en.wikipedia.org/wiki/Dead-code_elimination
 [constant propagation]: https://en.wikipedia.org/wiki/Constant_folding
 [`std::borrow::Cow`]: https://doc.rust-lang.org/stable/std/borrow/enum.Cow.html
 [`beef::Cow`]: https://docs.rs/beef/latest/beef/type.Cow.html
+[`beef::lean::Cow`]: https://docs.rs/beef/latest/beef/lean/type.Cow.html
+[feature]: https://doc.rust-lang.org/cargo/reference/features.html

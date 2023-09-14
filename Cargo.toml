@@ -28,6 +28,10 @@ categories = ["rust-patterns"]
 # resolver | not needed
 
 [dependencies]
+beef = { version = "0", optional = true }
 
 [dev-dependencies]
 rand = "0.8.5"
+
+[features]
+beef = ["dep:beef"]

@@ -51,6 +51,34 @@ impl<'s> MaybeOwned for std::borrow::Cow<'s, str> {
     }
 }
 
+#[cfg(feature = "beef")]
+impl<'s> MaybeOwned for beef::Cow<'s, str> {
+    type Owned = String;
+    type Borrowed<'a> = &'a str
+    where
+        's: 'a;
+    fn to_owned(self) -> <Self as MaybeOwned>::Owned {
+        self.into_owned()
+    }
+    fn borrow(&self) -> <Self as MaybeOwned>::Borrowed<'_> {
+        self.as_ref()
+    }
+}
+
+#[cfg(all(feature = "beef", target_pointer_width = "64"))]
+impl<'s> MaybeOwned for beef::lean::Cow<'s, str> {
+    type Owned = String;
+    type Borrowed<'a> = &'a str
+    where
+        's: 'a;
+    fn to_owned(self) -> <Self as MaybeOwned>::Owned {
+        self.into_owned()
+    }
+    fn borrow(&self) -> <Self as MaybeOwned>::Borrowed<'_> {
+        self.as_ref()
+    }
+}
+
 impl<'a, T: Clone> MaybeOwned for &'a [T] {
     type Owned = Vec<T>;
     type Borrowed<'b> = &'b [T]
